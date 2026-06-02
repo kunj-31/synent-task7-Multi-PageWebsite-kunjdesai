@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Reach out to FASHIONS styling board. Connect with our Soho showroom, email our customer service, or submit custom styling inquiries. Wear Your Confidence.">
+    <title>Contact Us | FASHIONS - Wear Your Confidence</title>
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Scroll-to-Top Button -->
+    <button id="scroll-top" class="scroll-top-btn" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Modern Sticky Navigation Bar -->
+    <nav class="navbar" id="main-nav">
+        <div class="container nav-container">
+            <!-- Brand Logo -->
+            <div class="logo">
+                <a href="index.html">FASHIONS</a>
+            </div>
+
+            <!-- Hamburger Button for Mobile Drawer -->
+            <button class="hamburger" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Main Navigation Links -->
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="collections.html" class="nav-link">Collections</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+
+            <!-- Practical Shopping Actions -->
+            <div class="nav-actions">
+                <button id="theme-toggle" class="icon-btn" aria-label="Toggle visual theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="#" class="icon-btn" aria-label="Search items">
+                    <i class="fas fa-search"></i>
+                </a>
+                <a href="#" class="icon-btn" aria-label="View shopping bag">
+                    <i class="fas fa-shopping-bag"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="section-padding text-center" style="background-color: var(--bg-secondary); border-bottom: 1px solid var(--border-color);">
+        <div class="container">
+            <div class="section-header" style="margin-bottom: 0;">
+                <span>Showroom & Support</span>
+                <h1 style="font-size: 2.8rem; font-weight: 300; text-transform: uppercase; letter-spacing: 3px;">Get In Touch</h1>
+                <p>Connect with our design board or schedule an appointment at our flagship Soho studio.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact & Form Section -->
+    <section class="section-padding" id="contact-main">
+        <div class="container">
+            <div class="contact-wrapper">
+                
+                <!-- Left Column: Contact Details (Address, Email, Phone, Socials) -->
+                <div class="contact-info-block animate-fade-in">
+                    <h3>Soho Flagship</h3>
+                    <p style="color: var(--text-muted); font-weight: 300; line-height: 1.8;">Our flagship showroom features the entire seasonal capsule. We encourage scheduling appointments for dedicated 1-on-1 styling consultations with our board.</p>
+                    
+                    <div class="contact-details">
+                        <!-- Item 1: Address -->
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Showroom Address</h4>
+                                <p>482 Mercer Street, Suite 100<br>Soho, New York, NY 10012</p>
+                            </div>
+                        </div>
+
+                        <!-- Item 2: Phone -->
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h4>Call Inquiries</h4>
+                                <p>+1 (212) 555-0198</p>
+                            </div>
+                        </div>
+
+                        <!-- Item 3: Email -->
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Digital Mail</h4>
+                                <p>styling@fashions.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Icons (Zara style border circles) -->
+                    <div class="contact-socials">
+                        <a href="#" class="social-circle-btn" aria-label="FASHIONS on Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-circle-btn" aria-label="FASHIONS on Pinterest"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" class="social-circle-btn" aria-label="FASHIONS on Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-circle-btn" aria-label="FASHIONS on Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Minimal Line Input Contact Form -->
+                <div class="contact-form-block animate-fade-in">
+                    <h3 class="form-title">Styling Inquiry</h3>
+                    
+                    <form id="contactForm" novalidate>
+                        <div class="form-row">
+                            <!-- Name Group -->
+                            <div class="form-group">
+                                <input type="text" id="name" required>
+                                <label for="name">Full Name</label>
+                            </div>
+                            
+                            <!-- Email Group -->
+                            <div class="form-group">
+                                <input type="email" id="email" required>
+                                <label for="email">Email Address</label>
+                            </div>
+                        </div>
+
+                        <!-- Subject Group -->
+                        <div class="form-group full-width">
+                            <input type="text" id="subject" required>
+                            <label for="subject">Inquiry Subject</label>
+                        </div>
+
+                        <!-- Message Group -->
+                        <div class="form-group full-width" style="margin-bottom: 40px;">
+                            <textarea id="message" rows="5" required></textarea>
+                            <label for="message">Message Description</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full" id="contact-submit-btn">Send Inquiry</button>
+                        <p id="formStatus" class="form-status"></p>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Professional Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <!-- Brand info column -->
+                    <div class="footer-column">
+                        <div class="footer-logo">FASHIONS</div>
+                        <p class="mb-20">A premium architectural perspective on modern clothing. Wear Your Confidence. Inspired by natural geometries, neutral styling, and quiet craftsmanship.</p>
+                    </div>
+
+                    <!-- Quick Links column -->
+                    <div class="footer-column">
+                        <h4>Sitemap</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="collections.html">Collections</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Collections column -->
+                    <div class="footer-column">
+                        <h4>Collections</h4>
+                        <ul class="footer-links">
+                            <li><a href="collections.html?filter=women">Women's Fashion</a></li>
+                            <li><a href="collections.html?filter=men">Men's Fashion</a></li>
+                            <li><a href="collections.html?filter=kids">Kids Clothing</a></li>
+                            <li><a href="collections.html?filter=accessories">Accessories</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Connect & Subscribe column -->
+                    <div class="footer-column">
+                        <h4>Newsletter</h4>
+                        <p>Subscribe for immediate styling launch briefs.</p>
+                        <form class="footer-subscribe-form" id="footer-newsletter-form">
+                            <input type="email" placeholder="EMAIL ADDRESS" aria-label="Footer subscription input" required>
+                            <button type="submit" class="footer-subscribe-btn"><i class="fas fa-arrow-right"></i></button>
+                        </form>
+                        <div class="footer-social-icons">
+                            <a href="#" aria-label="FASHIONS on Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="FASHIONS on Pinterest"><i class="fab fa-pinterest"></i></a>
+                            <a href="#" aria-label="FASHIONS on Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="FASHIONS on Facebook"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Copyright Banner -->
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Fashions Ltd. All rights reserved. Wear Your Confidence. Designed with premium high-fashion values.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main Javascript -->
+    <script src="script.js"></script>
+</body>
+</html>
