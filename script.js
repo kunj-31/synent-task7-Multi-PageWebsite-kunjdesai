@@ -1,7 +1,3 @@
-/**
- * FASHIONS - CUSTOM INTERACTIVE SCRIPT
- * Minimal, modular, and responsive client-side controllers.
- */
 
 document.addEventListener('DOMContentLoaded', () => {
     
