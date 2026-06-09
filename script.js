@@ -1,7 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     
-    // ==================== 1. MOBILE RESPONSIVE NAVIGATION ====================
+
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
-            // Toggle body scroll to prevent background scroll when menu is active
             document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
         });
         
@@ -24,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ==================== 2. ACTIVE NAVIGATION PAGE HIGHLIGHT ====================
     function highlightActivePage() {
         const path = window.location.pathname;
         const pageName = path.substring(path.lastIndexOf('/') + 1);
@@ -40,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
         
-        // Fallback for subpaths or index index
+     
         if (!found && pageName === '') {
             const indexLink = Array.from(navLinks).find(l => l.getAttribute('href') === 'index.html');
             if (indexLink) indexLink.classList.add('active');
@@ -48,11 +46,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     highlightActivePage();
 
-    // ==================== 3. DARK MODE TOGGLE ====================
+    
     const themeToggle = document.getElementById('theme-toggle');
     const currentTheme = localStorage.getItem('theme') || 'light';
     
-    // Apply cached theme on startup
+
     document.documentElement.setAttribute('data-theme', currentTheme);
     updateThemeIcon(currentTheme);
     
@@ -72,14 +70,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const icon = themeToggle.querySelector('i');
         if (icon) {
             if (theme === 'dark') {
-                icon.className = 'fas fa-sun'; // Sun icon for light mode option
+                icon.className = 'fas fa-sun';
             } else {
-                icon.className = 'fas fa-moon'; // Moon icon for dark mode option
+                icon.className = 'fas fa-moon'; 
             }
         }
     }
 
-    // ==================== 4. SCROLL TO TOP CONTROLLER ====================
+    
     const scrollTopBtn = document.getElementById('scroll-top');
     
     if (scrollTopBtn) {
@@ -99,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ==================== 5. NEWSLETTER MOCK SUBMISSION ====================
+
     const newsletterForm = document.getElementById('newsletter-form');
     const footerNewsletterForm = document.getElementById('footer-newsletter-form');
     
@@ -110,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const emailInput = formElement.querySelector('input[type="email"]');
             if (!emailInput || !emailInput.value.trim()) return;
             
-            // Minimalist feedback
+            
             const originalText = emailInput.placeholder;
             const originalValue = emailInput.value;
             
@@ -128,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
     registerNewsletter(newsletterForm);
     registerNewsletter(footerNewsletterForm);
 
-    // ==================== 6. TESTIMONIAL REVIEW SLIDER (HOME) ====================
+    
     const slides = document.querySelectorAll('.review-slide');
     const dots = document.querySelectorAll('.review-dot');
     let currentSlide = 0;
@@ -150,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
             showSlide(target);
         }
         
-        // Dot clicks
+        
         dots.forEach((dot, idx) => {
             dot.addEventListener('click', () => {
                 showSlide(idx);
@@ -167,19 +165,19 @@ document.addEventListener('DOMContentLoaded', () => {
             startSlideTimer();
         }
         
-        // Initialize slider
+        
         showSlide(0);
         startSlideTimer();
     }
 
-    // ==================== 7. DYNAMIC CATEGORY FILTERS (COLLECTIONS) ====================
+   
     const filterButtons = document.querySelectorAll('.filter-btn');
     const productCards = document.querySelectorAll('.product-card');
     
     if (filterButtons.length > 0 && productCards.length > 0) {
         filterButtons.forEach(button => {
             button.addEventListener('click', () => {
-                // Set active filter button
+
                 filterButtons.forEach(btn => btn.classList.remove('active'));
                 button.classList.add('active');
                 
@@ -199,19 +197,18 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        // URL Query filter dynamic activation
+        
         const urlParams = new URLSearchParams(window.location.search);
         const urlFilter = urlParams.get('filter');
         if (urlFilter) {
             const targetButton = Array.from(filterButtons).find(btn => btn.getAttribute('data-filter') === urlFilter);
             if (targetButton) {
-                // Trigger click to active the filter
                 targetButton.click();
             }
         }
     }
 
-    // ==================== 8. CONTACT FORM CONTROLLER (CONTACT) ====================
+    
     const contactForm = document.getElementById('contactForm');
     const formStatus = document.getElementById('formStatus');
     
@@ -240,7 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
             
-            // Simulate Success Response
+           
             showStatus('Thank you for contacting us! We will get back to you shortly.', 'success');
             contactForm.reset();
         });
