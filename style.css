@@ -2,42 +2,40 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 :root {
-    /* Color Palette */
     --primary: #111111;
     --bg-primary: #ffffff;
-    --bg-secondary: #f5f2eb; /* Soft Beige */
-    --bg-tertiary: #f9f9f9;  /* Light Gray */
+    --bg-secondary: #f5f2eb; 
+    --bg-tertiary: #f9f9f9;  
     --text-main: #111111;
     --text-muted: #767676;
     --border-color: #ebebeb;
     --accent-beige: #e6dfd3;
     
-    /* Typography */
+
     --font-primary: 'Poppins', sans-serif;
     
-    /* Layout & Spacing */
+
     --container-width: 1280px;
     --transition-speed: 0.4s;
     --transition-ease: cubic-bezier(0.25, 0.8, 0.25, 1);
-    --border-radius: 0px; /* Minimalist sharp edges like high-fashion brands */
+    --border-radius: 0px; 
     
-    /* UI Constants */
     --header-height: 80px;
 }
 
-/* Dark Mode Override */
+
 [data-theme="dark"] {
     --primary: #ffffff;
     --bg-primary: #111111;
-    --bg-secondary: #1a1916; /* Sophisticated Warm Dark */
-    --bg-tertiary: #181818;  /* Flat Charcoal */
+    --bg-secondary: #1a1916;
+    --bg-tertiary: #181818; 
     --text-main: #ffffff;
     --text-muted: #a0a0a0;
     --border-color: #2a2a2a;
     --accent-beige: #3a3833;
 }
 
-/* ========== RESET & BASE STYLES ========== */
+
 * {
     margin: 0;
     padding: 0;
@@ -80,7 +78,6 @@ button, input, textarea {
     outline: none;
 }
 
-/* ========== REUSABLE UTILITIES ========== */
 .container {
     max-width: var(--container-width);
     margin: 0 auto;
@@ -108,7 +105,7 @@ button, input, textarea {
 .mb-40 { margin-bottom: 40px; }
 .mb-60 { margin-bottom: 60px; }
 
-/* Section Header (Zara Style: Ultra Minimal) */
+
 .section-header {
     text-align: center;
     margin-bottom: 60px;
@@ -140,7 +137,6 @@ button, input, textarea {
     font-weight: 300;
 }
 
-/* ========== NAVIGATION BAR ========== */
 .navbar {
     background-color: var(--bg-primary);
     border-bottom: 1px solid var(--border-color);
@@ -208,7 +204,6 @@ button, input, textarea {
     font-weight: 500;
 }
 
-/* Action Icons: Search, Cart, Dark Mode Toggle */
 .nav-actions {
     display: flex;
     align-items: center;
@@ -228,7 +223,6 @@ button, input, textarea {
     color: var(--text-muted);
 }
 
-/* Mobile Menu Button */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -246,8 +240,6 @@ button, input, textarea {
     transition: transform var(--transition-speed) var(--transition-ease),
                 opacity var(--transition-speed) var(--transition-ease);
 }
-
-/* ========== HERO SECTION (INDEX) ========== */
 .hero {
     height: calc(100vh - var(--header-height));
     position: relative;
@@ -275,10 +267,10 @@ button, input, textarea {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.15); /* Light high-contrast scrim for text legibility */
+    background: rgba(0, 0, 0, 0.15); 
 }
 
-/* High Contrast / Text Shadow when on bright background */
+
 .hero-content {
     position: relative;
     z-index: 10;
@@ -313,7 +305,6 @@ button, input, textarea {
     letter-spacing: 0.5px;
 }
 
-/* Premium Minimalist Button Styles */
 .btn {
     display: inline-block;
     padding: 15px 40px;
@@ -364,7 +355,7 @@ button, input, textarea {
     text-align: center;
 }
 
-/* ========== EDITORIAL & TRENDING COLLECTIONS ========== */
+
 .editorial-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -456,7 +447,7 @@ button, input, textarea {
     background: linear-gradient(to top, rgba(17,17,17,0.85) 0%, rgba(17,17,17,0.1) 70%);
 }
 
-/* ========== PRODUCT CARD & GRID ========== */
+
 .product-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -514,7 +505,6 @@ button, input, textarea {
     z-index: 10;
 }
 
-/* Zara-style slide-up hover action button */
 .product-action {
     position: absolute;
     bottom: 0;
@@ -579,7 +569,6 @@ button, input, textarea {
     color: var(--text-main);
 }
 
-/* ========== CUSTOMER REVIEWS (HOME) ========== */
 .reviews-section {
     background-color: var(--bg-secondary);
 }
@@ -649,7 +638,7 @@ button, input, textarea {
     background-color: var(--primary);
 }
 
-/* ========== NEWSLETTER SUBSCRIPTION ========== */
+
 .newsletter-section {
     border-top: 1px solid var(--border-color);
     background-color: var(--bg-primary);
@@ -696,8 +685,6 @@ button, input, textarea {
     color: var(--text-muted);
 }
 
-/* ========== ABOUT PAGE CUSTOM COMPONENTS ========== */
-/* Split Narrative Row */
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -738,7 +725,6 @@ button, input, textarea {
     height: 100%;
 }
 
-/* Dual Column Mission & Vision */
 .mission-vision-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -777,7 +763,7 @@ button, input, textarea {
     color: var(--text-muted);
 }
 
-/* Why Choose Us Grid */
+
 .benefits-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -822,7 +808,6 @@ button, input, textarea {
     font-weight: 300;
 }
 
-/* Elegant Journey Timeline */
 .timeline {
     position: relative;
     max-width: 900px;
@@ -874,7 +859,6 @@ button, input, textarea {
     text-align: left;
 }
 
-/* Timeline Concentric Dot */
 .timeline-dot {
     position: absolute;
     width: 16px;
@@ -914,7 +898,6 @@ button, input, textarea {
     }
 }
 
-/* Timeline Card */
 .timeline-card {
     position: relative;
     background-color: var(--bg-primary);
@@ -947,7 +930,7 @@ button, input, textarea {
     box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.15);
 }
 
-/* Giant background year overlay */
+
 .timeline-year-bg {
     position: absolute;
     font-size: 7.5rem;
@@ -977,7 +960,7 @@ button, input, textarea {
     transform: scale(1.05);
 }
 
-/* Timeline Content Elements */
+
 .timeline-year {
     font-size: 1.1rem;
     font-weight: 600;
@@ -1008,7 +991,7 @@ button, input, textarea {
     z-index: 2;
 }
 
-/* Team Grid */
+
 .team-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1063,8 +1046,7 @@ button, input, textarea {
     margin-top: 4px;
 }
 
-/* ========== COLLECTIONS PAGE SPECIFIC ========== */
-/* Category Tag Filters (Zara Minimal style) */
+
 .filter-tabs {
     display: flex;
     justify-content: center;
@@ -1110,8 +1092,6 @@ button, input, textarea {
 .filter-btn:hover {
     color: var(--text-main);
 }
-
-/* Dynamic filter transitions on products grid */
 .product-card.hide {
     display: none;
 }
@@ -1120,7 +1100,6 @@ button, input, textarea {
     animation: fadeInUp 0.5s var(--transition-ease) forwards;
 }
 
-/* ========== CONTACT PAGE SPECIFIC ========== */
 .contact-wrapper {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
@@ -1196,7 +1175,6 @@ button, input, textarea {
     border-color: var(--primary);
 }
 
-/* Sleek Minimal Line Inputs for Form */
 .form-title {
     font-size: 1.8rem;
     font-weight: 400;
@@ -1276,7 +1254,6 @@ button, input, textarea {
                 color 0.3s var(--transition-ease);
 }
 
-/* Floating Label Animation */
 .form-group input:focus ~ label,
 .form-group input:valid ~ label,
 .form-group textarea:focus ~ label,
@@ -1310,7 +1287,6 @@ button, input, textarea {
 }
 
 
-/* ========== PROFESSIONAL FOOTER ========== */
 .footer {
     background-color: #111111;
     color: #a0a0a0;
@@ -1443,7 +1419,6 @@ button, input, textarea {
     letter-spacing: 1px;
 }
 
-/* ========== SCROLL TO TOP & ANIMATIONS ========== */
 .scroll-top-btn {
     position: fixed;
     bottom: 30px;
@@ -1474,7 +1449,7 @@ button, input, textarea {
     border-color: var(--primary);
 }
 
-/* Keyframes */
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -1491,7 +1466,6 @@ button, input, textarea {
     animation: fadeInUp 0.8s var(--transition-ease) forwards;
 }
 
-/* ========== MOBILE ADAPTIVE RESPONSIVENESS ========== */
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
